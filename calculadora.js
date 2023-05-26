@@ -23,8 +23,8 @@ class Calculadora{
 
 class Display{
 
-    constructor(dispValAnt,dispValAct){
-        this.DP = DP;
+    constructor(dispValAnt,dispValAct,DM){
+        this.DM = DM;
         this.dispValAct = dispValAct;
         this.dispValAnt = dispValAnt;
         this.tipoOper = undefined;
@@ -236,9 +236,10 @@ btnOper.forEach(boton =>{
 
 const dispValAnt = document.getElementById('valAnt');
 const dispValAct = document.getElementById('valAct');
+const DM = document.getElementById('display');
 
 
-const disp = new Display(dispValAnt,dispValAct);
+const disp = new Display(dispValAnt,dispValAct,DM);
 
 
 
