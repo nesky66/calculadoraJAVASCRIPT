@@ -1,2 +1,2 @@
 # calculadoraJAVASCRIPT
-Calculadora diseñada únicamente con JAVASCRIPT
+Calculadora diseñada únicamente con JAVASCRIPT y CSS
