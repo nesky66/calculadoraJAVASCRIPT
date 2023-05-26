@@ -1,0 +1,88 @@
+* {
+    font-family: 'Orbitron', sans-serif; 
+}
+
+body{
+    background-color: #383838; 
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  
+}
+
+.calculadora{
+    display: grid;
+    grid-template-columns: repeat(4,75px);
+    grid-template-rows: 160px repeat(5,75px);
+    color :rgb(138, 127, 127);
+    padding: 15px;
+    border-radius: 30px;
+    box-shadow: 10px 5px 0px 0px rgb(93, 89, 89);    
+    background-image: url('fondo1.jpg');
+    width: auto;
+    height: auto;
+    background-size: cover;
+}
+
+button{
+    cursor: pointer;
+    color:rgb(221, 209, 209);
+    text-shadow: 2px 2px 3px #690101;
+    margin: 5px;
+    padding: 0;
+    border-radius: 32px;
+    font-size: 1.5em;
+    border:none;  
+    background-color: rgba(136, 130, 130, 0.5);
+    box-shadow: 5px 5px 10px -3px black, -5px -5px 15px 3px darkred;
+
+}
+
+button:active{
+    background-color: rgb(109, 17, 17); 
+}
+
+button:focus{
+    outline: none;    
+}
+
+.col-2{
+    grid-column: span 2;
+}
+
+.display{
+    grid-column: 1 / -1;
+    padding: 16px;
+    display: flex;
+    margin: 10px 10px 20px;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: rgb(187, 178, 178);
+    color: #252525;
+    border-radius: 30px;
+    text-align: right;
+    justify-content: space-between;
+    word-break: break-all;
+    box-shadow: 0px 0px 0px 10px rgba(90, 85, 85, 0.3);
+    transition: 0.5s ease-in-out;
+}
+
+#valAct{
+    font-size: 1.5em;
+}
+
+#valAnt{
+    font-size: 2em;   
+}
+
+.dark-mode {
+    background-color: #252525;
+    color: rgb(187, 178, 178); 
+}
+
+.dark{  
+    font-size: small; 
+}
