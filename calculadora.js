@@ -187,7 +187,7 @@ app.appendChild(contenedor);
             const boton2 = document.createElement('button');
             boton2.classList.add('num');
             boton2.textContent = '2';
-           calculadora.appendChild(boton2);
+            calculadora.appendChild(boton2);
 
             const boton3 = document.createElement('button');
             boton3.classList.add('num');
