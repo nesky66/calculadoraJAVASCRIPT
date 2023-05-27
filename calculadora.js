@@ -36,7 +36,7 @@ class Display{
 
     agregaNum(numero){
         if (numero === '.' && this.valAct.includes('.')||
-            numero === '0' && !this.valAct.includes('.')) return;
+            numero === '0' && this.valAct.length ===0) return;
         else if (numero === '.' && this.valAct.length===0) this.valAct = '0';
         this.valAct = this.valAct.toString() + numero.toString();
         this.imprimeValores();
@@ -47,19 +47,16 @@ class Display{
         if(isNaN(parseFloat(this.valAct))) return;
         this.valAct = (parseFloat(this.valAct)) * (-1);
         this.valAct = this.valAct.toString();
-        this.imprimeValores();
-       
+        this.imprimeValores();       
     }
 
     borrar(){
-        
         
         if((Math.abs(parseFloat(this.valAct)<10&&this.valAct.length===2))){
             this.valAct='';
         }
         this.valAct = this.valAct.slice(0,-1);
-        this.imprimeValores();
-       
+        this.imprimeValores();       
     }
 
     borrarTodo(){
@@ -82,8 +79,7 @@ class Display{
         this.tipoOper !== 'igual' && this.calcular();
         this.tipoOper = operacion;
        
-        const numero = isNaN(parseFloat(this.valAct));
-       
+        const numero = isNaN(parseFloat(this.valAct));       
         this.valAnt = numero ? this.valAnt : (parseFloat(this.valAct)).toString();
         this.valAct = '';
         this.imprimeValores();
@@ -217,17 +213,17 @@ app.appendChild(contenedor);
             botonS.value = 'sum';
             calculadora.appendChild(botonS);
 
-            const boton0 = document.createElement('button');
-            boton0.classList.add('num');
-            boton0.textContent = '0';
-            calculadora.appendChild(boton0);
-
             const botonSG = document.createElement('button');
             botonSG.textContent = '\u00b1';
             botonSG.addEventListener('click',() => disp.signoX());
             calculadora.appendChild(botonSG);
 
-            const botonp = document.createElement('button');
+            const boton0 = document.createElement('button');
+            boton0.classList.add('num');
+            boton0.textContent = '0';
+            calculadora.appendChild(boton0);
+
+	    const botonp = document.createElement('button');
             botonp.classList.add('num');
             botonp.textContent = '.';
             calculadora.appendChild(botonp);
